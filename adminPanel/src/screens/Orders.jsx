@@ -16,7 +16,7 @@ const Orders = () => {
 
   const fetchAdmnOrders =async()=>{
     try{
-    const res = await axios.post('http://localhost:4000/api/order/adminorders');
+    const res = await axios.post('https://foodin-backend2.onrender.com/api/order/adminorders');
     if(res.data.success){
 
       console.log(res.data.orders);
@@ -31,7 +31,7 @@ const Orders = () => {
   const handleStatus =async(e,id)=>{
   
 
-  const res = await axios.post('http://localhost:4000/api/order/status' , {orderId : id , status : e.target.value});
+  const res = await axios.post('https://foodin-backend2.onrender.com/api/order/status' , {orderId : id , status : e.target.value});
   if(res.data.success){
     toast.success(res.data.message);
     fetchAdmnOrders();
