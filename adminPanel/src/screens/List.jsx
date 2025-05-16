@@ -11,7 +11,7 @@ const List = () => {
 
 
         try{
-        const res = await axios.post('http://localhost:4000/api/food/list')
+        const res = await axios.post('https://foodin-backend2.onrender.com/api/food/list')
         setList(res.data.data)
         }
         catch(error){
@@ -25,7 +25,7 @@ const List = () => {
     const removefood = async(id)=>{
         try{
 
-        const res = await axios.post("http://localhost:4000/api/food/remove" , {id})
+        const res = await axios.post("https://foodin-backend2.onrender.com/api/food/remove" , {id})
         if(res.data.success){
             await fetchlist();
            toast.success("Item Deleted")
@@ -70,7 +70,7 @@ const List = () => {
             {list.map((item)=>(
             <div>
                 <div  key = {item.id} className="food_item grid grid-cols-[1fr_1.5fr_1fr_1fr_1fr_0.5fr] p-[10px]">
-                    <img className='w-[50px]' src={"http://localhost:4000/images/" + item.image} alt="" />
+                    <img className='w-[50px]' src={"https://foodin-backend2.onrender.com/images/" + item.image} alt="" />
                     <p>{item.name}</p>
                     <p>{item.category}</p>
                     <p>{item.price}₹</p>
