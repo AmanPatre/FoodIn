@@ -55,7 +55,7 @@ const StoreContextProvider = (props) => {
 
   const fetchFood = async () => {
     try {
-      const res = await axios.post("http://localhost:4000/api/food/list");
+      const res = await axios.post("https://foodin-backend2.onrender.com/api/food/list");
       if (res.data.success) {
         setFoodList(res.data.data);
       }
