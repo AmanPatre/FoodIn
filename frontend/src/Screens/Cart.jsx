@@ -23,7 +23,7 @@ const Cart = () => {
 
       try{
 
-        const res = await axios.post('http://localhost:4000/api/cart/getcart', {}, {
+        const res = await axios.post('https://foodin-backend2.onrender.com/api/cart/getcart', {}, {
           headers: { token }
         });
 
@@ -65,7 +65,7 @@ const Cart = () => {
     const handleRemove = async (id) => {
       try {
         const res = await axios.post(
-          'http://localhost:4000/api/cart/removefromcart',
+          'https://foodin-backend2.onrender.com/api/cart/removefromcart',
           { itemId: id },
           { headers: { token } }
         );
