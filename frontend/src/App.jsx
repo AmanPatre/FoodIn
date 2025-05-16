@@ -9,7 +9,7 @@ import { useState } from "react";
 import LoginPopUp from "./Components/LoginPopUp";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Verify from "./Screens/verify";
+import Verify from "./Screens/Verify";
 import Myorders from "./Screens/Myorders";
 import Menu from "./Components/Menu";
 
