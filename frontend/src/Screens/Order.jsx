@@ -48,7 +48,7 @@ const Order = () => {
       const address = details;
 
 
-      let res = await axios.post('http://localhost:4000/api/order/placeorder' , {items :items, amount :amount , address :  address  } , {headers:{token : token}});
+      let res = await axios.post('https://foodin-backend2.onrender.com/api/order/placeorder' , {items :items, amount :amount , address :  address  } , {headers:{token : token}});
       if(res.data.success){
         const{session_url}= res.data;
         toast.success(res.data.message);

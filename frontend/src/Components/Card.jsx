@@ -41,7 +41,7 @@ const Card = ({id , name , price , image , description , category}) => {
  
     }
 
-    const res = await axios.post('http://localhost:4000/api/cart/addtocart' , {itemId:id , name : name , price : price , qty : itemCount , image , category : category  }, { headers : {token : token }});
+    const res = await axios.post('https://foodin-backend2.onrender.com/api/cart/addtocart' , {itemId:id , name : name , price : price , qty : itemCount , image , category : category  }, { headers : {token : token }});
     if(res.data.success){
       toast.success(res.data.message)
     }

@@ -46,7 +46,7 @@ const Menu = ({category , setCategory}) => {
   
         {foodlist.map((item, index) => (
           category === "All" || item.category === category ? (
-            <Card key={index} id={item._id} name={item.name} image={ "http://localhost:4000/images/"+item.image} price={item.price} description={item.description} category={item.category} />
+            <Card key={index} id={item._id} name={item.name} image={ "https://foodin-backend2.onrender.com/images/"+item.image} price={item.price} description={item.description} category={item.category} />
           ) : null
         ))}
       </div>

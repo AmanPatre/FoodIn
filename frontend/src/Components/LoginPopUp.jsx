@@ -35,7 +35,7 @@ const {setToken , token } = useContext(StoreContext)
    if(currState === "Login"){
     try{
 
-   const res = await axios.post("http://localhost:4000/api/user/loginuser" , data );
+   const res = await axios.post("https://foodin-backend2.onrender.com/api/user/loginuser" , data );
 
    if(res.data.success){
     toast.success(res.data.message);
@@ -59,7 +59,7 @@ const {setToken , token } = useContext(StoreContext)
    else if(currState === "Sign Up" ){
       try{
 
-   const res = await axios.post("http://localhost:4000/api/user/signupuser" , data );
+   const res = await axios.post("https://foodin-backend2.onrender.com/api/user/signupuser" , data );
 
    if(res.data.success){
     toast.success(res.data.message);

@@ -12,7 +12,7 @@ const Verify = () => {
     const navigate =  useNavigate();
 
     const verifyPayment =async()=>{
-        const res = await axios.post('http://localhost:4000/api/order/verify' , {success : success ,  orderId : orderId});
+        const res = await axios.post('https://foodin-backend2.onrender.com/api/order/verify' , {success : success ,  orderId : orderId});
         if(res.data.success){
             navigate("/myorders")
         }

@@ -14,7 +14,7 @@ const Myorders = () => {
 
   const fetchMyOrders=async()=>{
 
-    const res = await axios.post('http://localhost:4000/api/order/userorders' , {} , {headers:{token : token}})
+    const res = await axios.post('https://foodin-backend2.onrender.com/api/order/userorders' , {} , {headers:{token : token}})
     if(res.data.success){
     
        setData(res.data.data);
